@@ -11,13 +11,13 @@ public class ProductoBusinessImpl implements IProductoBusiness {
 
     @Override
     public List<Producto> obtenerProductos() {
-        return ProductoDaoImplList();
+        return productoDao.obtenerProductos();
     }
 
     @Override
     public Producto obtenerProducto(String codigo) {
         List<Producto> lista = obtenerProductos();
-        Producto buscar = new producto(codigo);
+        Producto buscar = new Producto(codigo);
         if (lista.contains(buscar)) {
             return productoDao.obtenerProducto(codigo);
         }
@@ -62,8 +62,6 @@ public class ProductoBusinessImpl implements IProductoBusiness {
         return resp;   
     }
 
-    private List<Producto> ProductoDaoImplList() {
-       
-    }
+    
 
 }

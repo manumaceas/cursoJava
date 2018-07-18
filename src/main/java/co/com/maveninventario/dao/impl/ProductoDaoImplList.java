@@ -30,7 +30,7 @@ public class ProductoDaoImplList implements IProductoDao{
         
         */
         
-        Producto producto = new Producto();        
+        Producto producto = new Producto(codigo);        
         return listado.get(listado.indexOf(producto));
         
         
